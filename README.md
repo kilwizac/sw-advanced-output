@@ -28,12 +28,18 @@ If you just want the macro file (no GitHub knowledge needed):
    - Ensure the drawing is saved to disk.
    - The referenced model must have "Part Number" and "Description" custom properties set. "Revision" is optional (from the drawing).
 
-   ![Custom Properties](custom_properties.png)
-   *The macro pulls "Part Number", "Description", and "Revision" from SolidWorks Custom Properties.*
+   ![Model Custom Properties](custom_properties.png)
+   *The macro pulls "Part Number" and "Description" from the referenced Model's Custom Properties.*
+
+   ![Drawing Custom Properties](drawing_custom_properties.png)
+   *Revision information is pulled from the Drawing. Note: If a revision table has not been added to the drawing, the macro will output filenames without revision levels.*
 
 2. **Running the Macro**:
    - Load and run `Advanced File Output.swp` in SolidWorks.
    - The macro will automatically detect the referenced model and export files to the same folder as the drawing.
+
+   ![Exported Files](export_screenshot.png)
+   *Example of exported DXF, PDF, and STEP files with intelligent naming.*
 
 3. **Output Files**:
    - `<Part Number>, <Description>[, Rev <Revision>].dxf` (drawing)
