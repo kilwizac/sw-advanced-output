@@ -28,7 +28,7 @@ If you just want the macro file (no GitHub knowledge needed):
    - Ensure the drawing is saved to disk.
    - The referenced model must have "Part Number" and "Description" custom properties set. "Revision" is optional (from the drawing).
 
-   ![Custom Properties](https://github.com/kilwizac/sw-advanced-output/raw/main/custom_properties.png)
+   ![Custom Properties](custom_properties.png)
    *The macro pulls "Part Number", "Description", and "Revision" from SolidWorks Custom Properties.*
 
 2. **Running the Macro**:
