@@ -22,35 +22,41 @@ If you just want the macro file (no GitHub knowledge needed):
 
 ## Usage
 
-1. **Prerequisites**:
-   - SolidWorks must be installed and running.
-   - Open a drawing document that references a part or assembly.
-   - Ensure the drawing is saved to disk.
-   - The referenced model must have "Part Number" and "Description" custom properties set. "Revision" is optional (from the drawing).
+### 1. Prerequisites (No Revision)
 
-   ![Model Custom Properties](custom_properties.png)
-   *The macro pulls "Part Number" and "Description" from the referenced Model's Custom Properties.*
+The macro pulls the "Part Number" and "Description" from the referenced model's custom properties.
 
-   ![Drawing Custom Properties](drawing_custom_properties.png)
-   *Revision information is pulled from the Drawing. Note: If a revision table has not been added to the drawing, the macro will output filenames without revision levels.*
+![Model Custom Properties](custom_properties.png)
+*1. Model Custom Properties: Ensure "Part Number" and "Description" are set.*
 
-   ![Revision Table](revision_table.png)
-   *Adding a Revision Table to the drawing automatically populates the "Revision" property.*
+If no revision table is present, the drawing's custom properties will not contain a "Revision" field.
 
-   ![Drawing Custom Properties with Revision](drawing_custom_properties_revision.png)
-   *Once the Revision Table is present, the "Revision" custom property is updated.*
+![Drawing Custom Properties](drawing_custom_properties.png)
+*2. Drawing Custom Properties: Without a revision table, no revision is pulled.*
 
-2. **Running the Macro**:
-   - Load and run `Advanced File Output.swp` in SolidWorks.
-   - The macro will automatically detect the referenced model and export files to the same folder as the drawing.
+Running the macro in this state will output files without revision levels.
 
-   ![Exported Files with Revision](export_revision_screenshot.png)
-   *Example of exported files including the revision level (e.g., ", Rev A") in the filename.*
+![Exported Files](export_screenshot.png)
+*3. Output: Filenames are generated using only Part Number and Description.*
 
-3. **Output Files**:
-   - `<Part Number>, <Description>[, Rev <Revision>].dxf` (drawing)
-   - `<Part Number>, <Description>[, Rev <Revision>].pdf` (drawing)
-   - `<Part Number>, <Description>[, Rev <Revision>].step` (model)
+---
+
+### 2. Adding Revisions
+
+To include a revision level in the filename, add a **Revision Table** to the drawing.
+
+![Revision Table](revision_table.png)
+*1. Revision Table: Adding the table to the drawing.*
+
+Adding the table automatically populates the "Revision" property in the drawing's custom properties.
+
+![Drawing Custom Properties with Revision](drawing_custom_properties_revision.png)
+*2. Drawing Properties: The "Revision" property is now available.*
+
+The macro detects this property and appends it to the filename.
+
+![Exported Files with Revision](export_revision_screenshot.png)
+*3. Output: Filenames now include the revision level (e.g., ", Rev A").*
 
 ## Installation
 
