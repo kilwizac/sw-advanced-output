@@ -2,6 +2,15 @@
 
 This SolidWorks VBA macro automates the export of the active drawing and its referenced model to multiple file formats, using custom properties for intelligent filename generation.
 
+## Quick download (for SolidWorks users)
+
+If you just want the macro file (no GitHub knowledge needed):
+
+- **Download the macro (.swp):**
+  https://github.com/kilwizac/sw-advanced-output/raw/main/Advanced%20File%20Output.swp
+
+**Tip:** If the link opens in your browser instead of downloading, **right‑click → “Save link as…”** (or similar) to save the `.swp` file.
+
 ## Features
 
 - **Drawing Export**: Exports the current drawing to DXF (with company-wide preferences) and PDF formats.
@@ -30,9 +39,9 @@ This SolidWorks VBA macro automates the export of the active drawing and its ref
 
 ## Installation
 
-- Download `Advanced File Output.swp` from this repository.
-- In SolidWorks, go to Tools > Macro > Run, and select the .swp file.
-- For persistent access, you can assign it to a toolbar button or menu.
+1. Download `Advanced File Output.swp` using the **Quick download** link above.
+2. In SolidWorks, go to **Tools → Macro → Run…** and select the `.swp` file.
+3. For persistent access, you can assign it to a toolbar button or menu.
 
 ## Requirements
 
